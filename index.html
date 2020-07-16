@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title> ¯\_(ツ)_/¯ </title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="dist/css/main.css">
+
+	<!--
+			Do I work in src or dist? Good question.
+
+			First of all, if you're a newbie and you don't want to worry about any of this
+			Prepros or Gulp stuff, or scss, or browser-syncing, just do everything in dist.
+			In fact, just delete the src folder.
+
+			If you're a geek and want to get into it, here's some background...
+
+			Prepros and Gulp do mostly the same things. Prepros is a GUI (it's pretty),
+			Gulp is a CLI (it's in the terminal, and it's ugly).
+
+			Both will watch your files, and where appropriate, they will error-check and
+			compile them from one format to another. To stay organized, we have to
+			split things up between the files we write: the *source* files in "src";
+			and the files they become: the files that get *distributed* on the web, in "dist".
+
+			So src/scss files become dist/css files,
+			And src/js files become dist/js files (that have been compiled down to ES5),
+			And src/img files become dist/img files (that have been compressed for you).
+
+			Anything that doesn't need compiling/compressing/error-checking (plugins, video, fonts, etc),
+			just put straight in *dist*.
+
+			One way to remember it is: you're only going to distribute *dist*. You keep the source files
+			to yourself, hidden from the world.
+
+			Go here to learn more about src and dist:
+				https://stackoverflow.com/questions/23730882/what-is-the-role-of-src-and-dist-folders
+			Or here for detailed instructions on setting up the gulp command line helper.
+				https://github.com/CreativeCircus/circus-starter
+
+			- Chris Silich
+		-->
+
+</head>
+
+<body>
+
+	<div class="floating-box">
+		<img class="logo" src="dist/img/logo.png" alt="Circus Logo">
+		<div class="foreground">
+
+			<form id="form">
+
+				<input type="text" name="key" />
+				<button type="submit" name="get">GET VALUE</button>
+				
+			</form>
+
+		</div>
+		<div class="background"></div>
+	</div>
+
+	<script src="node_modules/axios/dist/axios.min.js"></script>
+	<script src="dist/js/main.js"></script>
+
+</body>
+
+</html>
